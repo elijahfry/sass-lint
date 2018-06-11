@@ -1,7 +1,7 @@
 {
   "name": "sassy-lint",
   "version": "1.12.1",
-  "description": "All Node Sass linter!",
+  "description": "All Node Sassy linter!",
   "main": "index.js",
   "scripts": {
     "preversion": "npm test",

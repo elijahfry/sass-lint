@@ -1,7 +1,7 @@
 # Config File
 
 ### Configuration Options
-When passing options directly to `Sass-lint` option `config-file` will tell Sass Lint the path to a custom config file. `config-file` should be set to a path plus file name relative to where Sass Lint is being run from OR an absolute path. If not included, Sass Lint will attempt to find the closest config file, or fall back to the default one.
+When passing options directly to `Sassy-lint` option `config-file` will tell Sassy lint the path to a custom config file. `config-file` should be set to a path plus file name relative to where Sassy lint is being run from OR an absolute path. If not included, Sassy lint will attempt to find the closest config file, or fall back to the default one.
 
 ### Config File Options
 
@@ -49,7 +49,7 @@ rules:
   no-important: 1
 ```
 
-**start Sass-lint from the my-project directory**
+**start Sassy-lint from the my-project directory**
 
 `sassy-lint -c .sassy-lint-A.yml`
 

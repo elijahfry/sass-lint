@@ -1,6 +1,6 @@
-# Sass Lint [![npm version](https://badge.fury.io/js/sassy-lint.svg)](http://badge.fury.io/js/sassy-lint) [![Build Status](https://travis-ci.org/sasstools/sassy-lint.svg?branch=develop)](https://travis-ci.org/sasstools/sassy-lint) [![Coverage Status](https://coveralls.io/repos/sasstools/sassy-lint/badge.svg?branch=develop&service=github)](https://coveralls.io/github/sasstools/sassy-lint?branch=develop) [![Dependency Status](https://david-dm.org/sasstools/sassy-lint.svg)](https://david-dm.org/sasstools/sassy-lint#info=dependencies&view=list) [![Dev Dependency Status](https://david-dm.org/sasstools/sassy-lint/dev-status.svg)](https://david-dm.org/sasstools/sassy-lint#info=devDependencies&view=list)
+# Sassy Lint [![npm version](https://badge.fury.io/js/sassy-lint.svg)](http://badge.fury.io/js/sassy-lint) [![Build Status](https://travis-ci.org/sasstools/sassy-lint.svg?branch=develop)](https://travis-ci.org/sasstools/sassy-lint) [![Coverage Status](https://coveralls.io/repos/sasstools/sassy-lint/badge.svg?branch=develop&service=github)](https://coveralls.io/github/sasstools/sassy-lint?branch=develop) [![Dependency Status](https://david-dm.org/sasstools/sassy-lint.svg)](https://david-dm.org/sasstools/sassy-lint#info=dependencies&view=list) [![Dev Dependency Status](https://david-dm.org/sasstools/sassy-lint/dev-status.svg)](https://david-dm.org/sasstools/sassy-lint#info=devDependencies&view=list)
 
-A Node-only Sass linter for both `sass` and `scss` syntax!
+A Node-only Sassy linter for both `sass` and `scss` syntax!
 
 ---
 
@@ -21,7 +21,7 @@ npm install sassy-lint --save-dev
 
 ## Configuring
 
-Sass-lint can be configured from a `.sassy-lint.yml` or `.sasslintrc` file in your project. The `.sasslintrc` file can be in either JSON format or YAML. Both formats are interchangeable easily using tools such as [json2yaml](https://www.json2yaml.com/). If you don't either file in the root of your project or you would like all your projects to follow a standard config file then you can specify the path to one in your project's `package.json` file with the `sasslintConfig` option.
+Sassy-lint can be configured from a `.sassy-lint.yml` or `.sasslintrc` file in your project. The `.sasslintrc` file can be in either JSON format or YAML. Both formats are interchangeable easily using tools such as [json2yaml](https://www.json2yaml.com/). If you don't either file in the root of your project or you would like all your projects to follow a standard config file then you can specify the path to one in your project's `package.json` file with the `sasslintConfig` option.
 
 For example:
 ```javascript
@@ -36,11 +36,11 @@ Use the [Sample Config (YAML)](https://github.com/sasstools/sassy-lint/tree/mast
 
 ### [Configuration Documentation](https://github.com/sasstools/sassy-lint/tree/master/docs/options)
 
-*Migrating from SCSS-Lint*: If you already have a config for SCSS-Lint, you can instantly convert it to the equivalent Sass Lint config at [sasstools.github.io/make-sassy-lint-config](http://sasstools.github.io/make-sassy-lint-config/).
+*Migrating from SCSS-Lint*: If you already have a config for SCSS-Lint, you can instantly convert it to the equivalent Sassy lint config at [sasstools.github.io/make-sassy-lint-config](http://sasstools.github.io/make-sassy-lint-config/).
 
 ### Options
 
-The following are options that you can use to config the Sass Linter.
+The following are options that you can use to config the Sassy linter.
 
 * [cache-config](https://github.com/sasstools/sassy-lint/tree/master/docs/options/cache-config.md) - Allows you to cache your config for a small speed boost when not changing the contents of your config file
 * [config-file](https://github.com/sasstools/sassy-lint/tree/master/docs/options/config-file.md) - Specify another config file to load
@@ -171,7 +171,7 @@ a {
 
 ## CLI
 
-Sass Lint [`v1.1.0`](https://github.com/sasstools/sassy-lint/releases/tag/v1.1.0) introduced the ability to run Sass Lint through a command line interface. See the [CLI Docs](https://github.com/sasstools/sassy-lint/tree/master/docs/cli) for full documentation on how to use the CLI.
+Sassy lint [`v1.1.0`](https://github.com/sasstools/sassy-lint/releases/tag/v1.1.0) introduced the ability to run Sassy lint through a command line interface. See the [CLI Docs](https://github.com/sasstools/sassy-lint/tree/master/docs/cli) for full documentation on how to use the CLI.
 
 There are small differences which are useful to understand over other CLI tools you may have encountered with other linters.
 
@@ -248,7 +248,7 @@ For further information you can visit our CLI documentation linked below.
 
 ## Front matter
 
-Certain static site generators such as [Jekyll](http://jekyllrb.com/docs/frontmatter/) include the YAML front matter block at the top of their scss file. Sass-lint by default checks a file for this block and attempts to parse your Sass without this front matter. You can see an example of a front matter block below.
+Certain static site generators such as [Jekyll](http://jekyllrb.com/docs/frontmatter/) include the YAML front matter block at the top of their scss file. Sasy-lint by default checks a file for this block and attempts to parse your Sass without this front matter. You can see an example of a front matter block below.
 
 ```scss
 

@@ -10,5 +10,3 @@ tests
 .travis.yml
 .nvmrc
 appveyor.yml
-CONTRIBUTING.md
-CODE_OF_CONDUCT.md

@@ -1,6 +1,6 @@
 # Command Line Interface
 
-Sass Lint can be run via its Command Line Interface (CLI). To do so, run `sassy-lint` from the command line.
+Sassy lint can be run via its Command Line Interface (CLI). To do so, run `sassy-lint` from the command line.
 
 By default, the command will run against the glob / array of globs defined by a user's `file.include` option in their config, or a glob / array of globs (or single files) can be passed as the last argument to the CLI to be explicitly run against.
 
@@ -17,10 +17,10 @@ Command Line Flag        | Description
 `-h`,`--help`             | Outputs usage information for the CLI
 `-i`,`--ignore [pattern]` | A pattern that should be ignored from linting. Multiple patterns can be used by separating each pattern by `, `. Patterns should be wrapped in quotes (will be merged with other ignore options)
 `--max-warnings [integer]`| Normally, if SassLint runs and finds no errors (only warnings), it will exit with a success exit status. However, if this option is specified and the total warning count is greater than the specified threshold, SassLint will exit with an error status.
-`-o`,`--output [output]`  | The path plus file name relative to where Sass Lint is being run from where the output should be written to.
+`-o`,`--output [output]`  | The path plus file name relative to where Sassy lint is being run from where the output should be written to.
 `-q`,`--no-exit`          | Prevents the CLI from throwing an error if there is one (useful for development work)
 `-s`,`--syntax`           | Syntax to evaluate the given file(s) with, either sass or scss. Use with care: overrides filename extension-based syntax detection.
 `-v`,`--verbose`          | Verbose output (fully formatted output)
-`-V`,`--version`          | Outputs the version number of Sass Lint
+`-V`,`--version`          | Outputs the version number of Sassy lint
 
 To see more on how to use the CLI you can view the examples included within sassy-lint's [readme](https://github.com/sasstools/sassy-lint/blob/develop/README.md#cli)

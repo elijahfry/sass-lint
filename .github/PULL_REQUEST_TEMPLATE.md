@@ -1,7 +1,7 @@
 <!--
 ## New Pull Request Information
 
-Please make sure you have read through our [contribution guidelines](https://github.com/sasstools/sass-lint/blob/develop/CONTRIBUTING.md#pull-requests) before submitting a pull request.
+Please make sure you have read through our [contribution guidelines](https://github.com/sasstools/sassy-lint/blob/develop/CONTRIBUTING.md#pull-requests) before submitting a pull request.
 
 Most importantly your pull request should provide information on what the changes do and they should reference an already created issue. e.g. 'Fixes #80' for bugs and 'Closes #90' for other issues.
 

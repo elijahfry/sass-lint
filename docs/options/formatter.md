@@ -1,6 +1,6 @@
 # Formatter
 
-Option `formatter` will determine how results from Sass Lint will be formatted for output.
+Option `formatter` will determine how results from Sassy lint will be formatted for output.
 
 ## Options
 

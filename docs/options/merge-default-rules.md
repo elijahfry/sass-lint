@@ -1,8 +1,8 @@
 # Merge Default Rules
 
-Option `merge-default-rules` will determine whether the rules present in a user's external configuration file or passed directly in to Sass Lint will override or merge with the default rules present in Sass Lint. All other configuration options will still be merged.
+Option `merge-default-rules` will determine whether the rules present in a user's external configuration file or passed directly in to Sassy lint will override or merge with the default rules present in Sassy lint. All other configuration options will still be merged.
 
-If an external configuration file has `merge-default-rules` set to `false`, its rules will override the default rules, but rules passed directly in to Sass Lint will be merged with the configuration file rules (unless they too have `merge-default-rules` set to `false`, in which case they will override).
+If an external configuration file has `merge-default-rules` set to `false`, its rules will override the default rules, but rules passed directly in to Sassy lint will be merged with the configuration file rules (unless they too have `merge-default-rules` set to `false`, in which case they will override).
 
 ## Options
 
