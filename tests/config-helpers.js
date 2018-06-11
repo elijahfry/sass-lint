@@ -12,7 +12,7 @@ var emptyConfig = {
   files: {},
   rules: {}
 };
-var defaultConfig = yaml.safeLoad(fs.readFileSync(path.resolve('lib/config/sass-lint.yml'), 'utf8'));
+var defaultConfig = yaml.safeLoad(fs.readFileSync(path.resolve('lib/config/sassy-lint.yml'), 'utf8'));
 var ignoreConfig = yaml.safeLoad(fs.readFileSync('tests/yml/.ignore-file.yml', 'utf8'));
 
 var extendableConfigA1 = {

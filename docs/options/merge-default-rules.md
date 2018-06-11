@@ -10,7 +10,7 @@ If an external configuration file has `merge-default-rules` set to `false`, its 
 
 ## Examples
 
-Below is a sample of sass-lints default rules. You can see the full default ruleset [here](https://github.com/sasstools/sass-lint/blob/develop/lib/config/sass-lint.yml).
+Below is a sample of sassy-lints default rules. You can see the full default ruleset [here](https://github.com/sasstools/sassy-lint/blob/develop/lib/config/sassy-lint.yml).
 
 ```yml
 options:

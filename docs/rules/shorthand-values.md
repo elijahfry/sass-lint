@@ -11,7 +11,7 @@ Rule `shorthand-values` will enforce that values in their shorthand form are as 
 When `allowed-shorthands` is left at default, the following is enforced:
 
 ```yml
-# .sass-lint.yml
+# .sassy-lint.yml
 shorthand-values: 1
 ```
 
@@ -37,7 +37,7 @@ margin: 1px 2px 3px;
 When `allowed-shorthands` is `[1]`, the following is enforced:
 
 ```yml
-# .sass-lint.yml
+# .sassy-lint.yml
 shorthand-values:
   - 1
   -
@@ -61,7 +61,7 @@ margin: 1px 2px 1px 2px;
 When `allowed-shorthands` is `[1, 2]`, the following is enforced:
 
 ```yml
-# .sass-lint.yml
+# .sassy-lint.yml
 shorthand-values:
   - 1
   -

@@ -29,6 +29,7 @@ rules:
   no-invalid-hex: 0
   no-css-comments: 0
   no-color-literals: 0
+  no-vendor-prefix: 0
 
   # Style Guide
   border-zero: 0

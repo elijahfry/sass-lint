@@ -16,14 +16,14 @@ var results = [{
       ruleId: 'empty-line-between-blocks',
       line: 14,
       column: 2,
-      message: 'Space expected between blocks',
+      message: 'Stacking blocks like its Jenga',
       severity: 1
     },
     {
       ruleId: 'empty-line-between-blocks',
       line: 17,
       column: 2,
-      message: 'Space expected between blocks',
+      message: 'Stacking blocks like its Jenga',
       severity: 1
     }
   ]

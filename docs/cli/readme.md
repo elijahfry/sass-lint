@@ -1,6 +1,6 @@
 # Command Line Interface
 
-Sass Lint can be run via its Command Line Interface (CLI). To do so, run `sass-lint` from the command line.
+Sass Lint can be run via its Command Line Interface (CLI). To do so, run `sassy-lint` from the command line.
 
 By default, the command will run against the glob / array of globs defined by a user's `file.include` option in their config, or a glob / array of globs (or single files) can be passed as the last argument to the CLI to be explicitly run against.
 
@@ -13,7 +13,7 @@ The following options are available for the CLI:
 Command Line Flag        | Description
 -------------------------|------------------------------------
 `-c`,`--config [path]`    | Path to the config file that should be used, relative to the directory the the command is being run in (will override other config path options)
-`-f`,`--format [format]`  | Pass one of the available [Eslint formats](https://github.com/eslint/eslint/tree/master/lib/formatters) to format the output of sass-lint results.
+`-f`,`--format [format]`  | Pass one of the available [Eslint formats](https://github.com/eslint/eslint/tree/master/lib/formatters) to format the output of sassy-lint results.
 `-h`,`--help`             | Outputs usage information for the CLI
 `-i`,`--ignore [pattern]` | A pattern that should be ignored from linting. Multiple patterns can be used by separating each pattern by `, `. Patterns should be wrapped in quotes (will be merged with other ignore options)
 `--max-warnings [integer]`| Normally, if SassLint runs and finds no errors (only warnings), it will exit with a success exit status. However, if this option is specified and the total warning count is greater than the specified threshold, SassLint will exit with an error status.
@@ -23,4 +23,4 @@ Command Line Flag        | Description
 `-v`,`--verbose`          | Verbose output (fully formatted output)
 `-V`,`--version`          | Outputs the version number of Sass Lint
 
-To see more on how to use the CLI you can view the examples included within sass-lint's [readme](https://github.com/sasstools/sass-lint/blob/develop/README.md#cli)
+To see more on how to use the CLI you can view the examples included within sassy-lint's [readme](https://github.com/sasstools/sassy-lint/blob/develop/README.md#cli)

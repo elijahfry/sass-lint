@@ -5,7 +5,7 @@ For special cases where a particular lint doesn't make sense in a specific area 
 ## Disable a rule for the entire file
 
 ```scss
-// sass-lint:disable border-zero
+// sassy-lint:disable border-zero
 p {
   border: none; // No lint reported
 }
@@ -14,7 +14,7 @@ p {
 ## Disable more than 1 rule
 
 ```scss
-// sass-lint:disable border-zero, quotes
+// sassy-lint:disable border-zero, quotes
 p {
   border: none; // No lint reported
   content: "hello"; // No lint reported
@@ -25,7 +25,7 @@ p {
 
 ```scss
 p {
-  border: none; // sass-lint:disable-line border-zero
+  border: none; // sassy-lint:disable-line border-zero
 }
 ```
 
@@ -33,7 +33,7 @@ p {
 
 ```scss
 p {
-  // sass-lint:disable-block border-zero
+  // sassy-lint:disable-block border-zero
   border: none; // No result reported
 }
 
@@ -45,11 +45,11 @@ a {
 ## Disable and enable again
 
 ```scss
-// sass-lint:disable border-zero
+// sassy-lint:disable border-zero
 p {
   border: none; // No result reported
 }
-// sass-lint:enable border-zero
+// sassy-lint:enable border-zero
 
 a {
   border: none; // Failing result reported
@@ -59,11 +59,11 @@ a {
 ## Disable/enable all linters
 
 ```scss
-// sass-lint:disable-all
+// sassy-lint:disable-all
 p {
   border: none; // No result reported
 }
-// sass-lint:enable-all
+// sassy-lint:enable-all
 
 a {
   border: none; // Failing result reported

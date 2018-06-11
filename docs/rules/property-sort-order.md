@@ -7,7 +7,7 @@ Rule `property-sort-order` will enforce the order in which declarations are writ
 * `order`: `'alphabetical'`, [`'concentric'`](http://rhodesmill.org/brandon/2011/concentric-css/), [`'recess'`](http://twitter.github.io/recess/), [`'smacss'`](http://smacss.com/book/formatting), or `[array of properties]` (defaults to `alphabetical`. Unknown properties are sorted alphabetically)
 * `ignore-custom-properties`: `true`/`false` (defaults to `false`)
 
-Property orders: https://github.com/sasstools/sass-lint/tree/develop/lib/config/property-sort-orders
+Property orders: https://github.com/sasstools/sassy-lint/tree/develop/lib/config/property-sort-orders
 
 ## Examples
 
@@ -33,7 +33,7 @@ When enabled (assuming `order: alphabetical`), the following are disallowed:
 
 ### Custom Sort Orders
 
-You have the option to create your own custom property sort orders. These are specified in your `.sass-lint.yml` file as below:
+You have the option to create your own custom property sort orders. These are specified in your `.sassy-lint.yml` file as below:
 
 ```yaml
 property-sort-order:

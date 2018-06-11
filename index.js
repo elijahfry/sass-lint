@@ -9,8 +9,7 @@ var slConfig = require('./lib/config'),
     glob = require('glob'),
     path = require('path'),
     fs = require('fs-extra'),
-    globule = require('globule'),
-    getFormatter = require('./lib/format/getFormatter');
+    globule = require('globule');
 
 var getToggledRules = ruleToggler.getToggledRules,
     isResultEnabled = ruleToggler.isResultEnabled;
@@ -36,7 +35,7 @@ sassLint.getConfig = function (config, configPath) {
  * Parses our results object to count errors and return
  * paths to files with detected errors.
  *
- * @param {Array} results our results Array
+ * @param {object} results our results object
  * @returns {object} errors object containing the error count and paths for files incl. errors
  */
 sassLint.errorCount = function (results) {
@@ -59,7 +58,7 @@ sassLint.errorCount = function (results) {
  * Parses our results object to count warnings and return
  * paths to files with detected warnings.
  *
- * @param {Array} results our results array
+ * @param {object} results our results object
  * @returns {object} warnings object containing the error count and paths for files incl. warnings
  */
 sassLint.warningCount = function (results) {
@@ -82,7 +81,7 @@ sassLint.warningCount = function (results) {
  * Parses our results object to count warnings and errors and return
  * a cumulative count of both
  *
- * @param {Array} results our results array
+ * @param {object} results our results object
  * @returns {int} the cumulative count of errors and warnings detected
  */
 sassLint.resultCount = function (results) {
@@ -132,7 +131,7 @@ sassLint.lintText = function (file, options, configPath) {
     isEnabledFilter = isResultEnabled(ruleToggles);
 
     rules.forEach(function (rule) {
-      detects = rule.rule.detect(ast, rule)
+      detects = rule.rule.detect(ast, rule, options.serious)
         .filter(isEnabledFilter);
       results = results.concat(detects);
       if (detects.length) {
@@ -189,7 +188,7 @@ sassLint.lintFileText = function (file, options, configPath) {
  * @param {string} files a glob pattern or single file path as a lint target
  * @param {object} options user specified rules/options passed in
  * @param {string} configPath path to a config file
- * @returns {Array} results object containing all results
+ * @returns {object} results object containing all results
  */
 sassLint.lintFiles = function (files, options, configPath) {
   var that = this,
@@ -197,6 +196,7 @@ sassLint.lintFiles = function (files, options, configPath) {
       includes = [],
       ignores = '';
 
+  // console.log(options);
   // Files passed as a string on the command line
   if (files) {
     ignores = this.getConfig(options, configPath).files.ignore || '';
@@ -246,15 +246,16 @@ sassLint.lintFiles = function (files, options, configPath) {
 /**
  * Handles formatting of results using EsLint formatters
  *
- * @param {Array} results our results array
+ * @param {object} results our results object
  * @param {object} options user specified rules/options passed in
  * @param {string} configPath path to a config file
- * @returns {string} results our results object in the user specified format
+ * @returns {object} results our results object in the user specified format
  */
 sassLint.format = function (results, options, configPath) {
-  var config = this.getConfig(options, configPath);
+  var config = this.getConfig(options, configPath),
+      format = config.options.formatter.toLowerCase();
 
-  var formatted = getFormatter(config.options.formatter, config);
+  var formatted = require('eslint/lib/formatters/' + format);
 
   return formatted(results);
 };
@@ -263,10 +264,10 @@ sassLint.format = function (results, options, configPath) {
  * Handles outputting results whether this be straight to the console/stdout or to a file.
  * Passes results to the format function to ensure results are output in the chosen format
  *
- * @param {Array} results our results array
+ * @param {object} results our results object
  * @param {object} options user specified rules/options passed in
  * @param {string} configPath path to a config file
- * @returns {string} the formatted results string
+ * @returns {object} results our results object
  */
 sassLint.outputResults = function (results, options, configPath) {
   var config = this.getConfig(options, configPath);
@@ -295,7 +296,7 @@ sassLint.outputResults = function (results, options, configPath) {
  * Throws an error if there are any errors detected. The error includes a count of all errors
  * and a list of all files that include errors.
  *
- * @param {Array} results - our results array
+ * @param {object} results - our results object
  * @param {object} [options] - extra options to use when running failOnError, e.g. max-warnings
  * @param {string} [configPath] - path to the config file
  * @returns {void}

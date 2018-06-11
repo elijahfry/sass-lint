@@ -2,17 +2,17 @@
 
 An error will be thrown if the total number of warnings exceeds the `max-warnings` setting.
 
-> Please note, if you're using this option with the sass-lint CLI and you're specifying the `--no-exit / -q` option too, you will not see an error but an error code of 1 will still be thrown.
+> Please note, if you're using this option with the sassy-lint CLI and you're specifying the `--no-exit / -q` option too, you will not see an error but an error code of 1 will still be thrown.
 
 ## Examples
 
 This can be set as a command-line option:
 
 ``` bash
-$ sass-lint --max-warnings 50
+$ sassy-lint --max-warnings 50
 ```
 
-In `.sass-lint.yml`:
+In `.sassy-lint.yml`:
 
 ``` yaml
 options:
@@ -22,7 +22,7 @@ options:
 Or inside a script:
 
 ``` javascript
-var sassLint = require('sass-lint'),
+var sassLint = require('sassy-lint'),
     config = {options: {'max-warnings': 50}};
 
 results = sassLint.lintFiles('sass/**/*.scss', config)

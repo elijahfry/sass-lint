@@ -1,15 +1,12 @@
 active
-any
 checked
 default
-dir
 disabled
 empty
 enabled
 first
 first-child
 first-of-type
-fullscreen
 focus
 hover
 indeterminate
@@ -34,7 +31,6 @@ read-write
 required
 right
 root
-scope
 target
 valid
 visited

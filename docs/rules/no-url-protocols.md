@@ -5,7 +5,7 @@ Rule `no-url-protocols` will enforce that protocols and domains are not used wit
 ## Options
 
 * `allow-protocol-relative-urls`: `true`/`false` (defaults to `false`)
-> This option is scheduled to be deprecated in favour of the [no-url-domains](https://github.com/sasstools/sass-lint/blob/develop/docs/rules/no-url-domains.md) rule in sass-lint 2.0.
+> This option is scheduled to be deprecated in favour of the [no-url-domains](https://github.com/sasstools/sassy-lint/blob/develop/docs/rules/no-url-domains.md) rule in sassy-lint 2.0.
 
 ## Examples
 

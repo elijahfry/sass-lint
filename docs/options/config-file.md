@@ -18,31 +18,31 @@ The config file loaded from the `config-file` option will be treated as a base c
 
 **Absolute path**
 
-`/root/my/projects/config/extend/.sass-lint.yml`
+`/root/my/projects/config/extend/.sassy-lint.yml`
 
 **Relative path**
 
-`extra-config/.sass-lint.yml`
+`extra-config/.sassy-lint.yml`
 
 ## Example
 
 **Project Structure**
 ```
 my-project/
- - .sass-lint-A.yml
+ - .sassy-lint-A.yml
  - sub-folder/
-   - .sass-lint-B.yml
+   - .sassy-lint-B.yml
 ```
 
-**.sass-lint-A.yml**
+**.sassy-lint-A.yml**
 ```yml
 options:
-  config-file: sub-folder/.sass-lint-B.yml
+  config-file: sub-folder/.sassy-lint-B.yml
 rules:
   no-ids: 1
 ```
 
-**.sass-lint-B.yml**
+**.sassy-lint-B.yml**
 ```yml
 rules:
   no-ids: 2
@@ -51,7 +51,7 @@ rules:
 
 **start Sass-lint from the my-project directory**
 
-`sass-lint -c .sass-lint-A.yml`
+`sassy-lint -c .sassy-lint-A.yml`
 
 
 In the scenario above the first config would load and merge the second config recursively.
@@ -60,7 +60,7 @@ The resulting config you could expect would be:
 
 ```yml
 options:
-  config-file: sub-folder/.sass-lint-B.yml
+  config-file: sub-folder/.sassy-lint-B.yml
 rules:
   no-ids: 1
   no-important: 1

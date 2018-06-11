@@ -34,7 +34,7 @@ var custOptions = function () {
 
 describe('config', function () {
   it('should return the defaults if no config is passed in', function (done) {
-    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sass-lint.yml'), 'utf8')),
+    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sassy-lint.yml'), 'utf8')),
         conf = config();
 
     assert(
@@ -52,7 +52,7 @@ describe('config', function () {
 
   it('should merge options when passed in', function (done) {
 
-    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sass-lint.yml'), 'utf8')),
+    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sassy-lint.yml'), 'utf8')),
         tempOptions = custOptions(),
         conf = config(tempOptions),
         merged = merge.recursive(defaultConfig, tempOptions);
@@ -71,7 +71,7 @@ describe('config', function () {
   });
 
   it('should use a config file if one is provided', function (done) {
-    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sass-lint.yml'), 'utf8')),
+    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sassy-lint.yml'), 'utf8')),
         tempOptions = {
           'options': {
             'config-file': 'tests/yml/.stylish-output.yml',
@@ -95,7 +95,7 @@ describe('config', function () {
   });
 
   it('should not merge default rules when `merge-default-rules` is false in config file [check unique]', function (done) {
-    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sass-lint.yml'), 'utf8')),
+    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sassy-lint.yml'), 'utf8')),
         tempOptions = custOptions(),
         conf,
         merged;
@@ -169,7 +169,7 @@ describe('config', function () {
   });
 
   it('should not merge custom option rules when `merge-default-rules` is false', function (done) {
-    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sass-lint.yml'), 'utf8')),
+    var defaultConfig = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', 'lib', 'config', 'sassy-lint.yml'), 'utf8')),
         tempOptions = custOptions(),
         conf,
         merged;
