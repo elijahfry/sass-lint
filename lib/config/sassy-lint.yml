@@ -27,7 +27,7 @@ rules:
   no-color-keywords: 0 ##########DONE##########
   no-color-literals: 0 ##########DONE##########
   no-combinators: 0 ###OFF ##########DONE##########
-  no-css-comments: 0 ##########DONE##########
+  no-css-comments: 1 ##########DONE##########
   no-debug: 1 ##########DONE##########
   no-disallowed-properties: 0 ###OFF ##########DONE##########
   no-duplicate-properties: 2 ##########DONE##########

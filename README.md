@@ -1,18 +1,16 @@
 # Sassy Lint
 
-A Node-only Sassy linter for both `sass` and `scss` syntax!
+A Node-only Sass linter for your sassiest needs!
 
 ---
 
 ## Install
-You can get `sassy-lint` from [NPM](https://www.npmjs.com/package/sassy-lint):
-
-Install globally
+Save to your local_modules folder, then install globally
 ```
-npm install -g sassy-lint
+npm install -g sassy-lint ./local_modules/sassy-lint
 ```
 
-To save to a project as a dev dependency
+Or save to a project as a dev dependency
 ```
 npm install sassy-lint --save-dev
 ```
