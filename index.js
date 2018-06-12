@@ -14,7 +14,7 @@ var slConfig = require('./lib/config'),
 var getToggledRules = ruleToggler.getToggledRules,
     isResultEnabled = ruleToggler.isResultEnabled;
 
-var sassLint = function (config) { // eslint-disable-line no-unused-vars
+var sassyLint = function (config) { // eslint-disable-line no-unused-vars
   config = require('./lib/config')(config);
   return;
 };
@@ -27,7 +27,7 @@ var sassLint = function (config) { // eslint-disable-line no-unused-vars
  * @param {string} configPath path to a config file
  * @returns {object} the compiled config object
  */
-sassLint.getConfig = function (config, configPath) {
+sassyLint.getConfig = function (config, configPath) {
   return slConfig(config, configPath);
 };
 
@@ -38,7 +38,7 @@ sassLint.getConfig = function (config, configPath) {
  * @param {object} results our results object
  * @returns {object} errors object containing the error count and paths for files incl. errors
  */
-sassLint.errorCount = function (results) {
+sassyLint.errorCount = function (results) {
   var errors = {
     count: 0,
     files: []
@@ -61,7 +61,7 @@ sassLint.errorCount = function (results) {
  * @param {object} results our results object
  * @returns {object} warnings object containing the error count and paths for files incl. warnings
  */
-sassLint.warningCount = function (results) {
+sassyLint.warningCount = function (results) {
   var warnings = {
     count: 0,
     files: []
@@ -84,7 +84,7 @@ sassLint.warningCount = function (results) {
  * @param {object} results our results object
  * @returns {int} the cumulative count of errors and warnings detected
  */
-sassLint.resultCount = function (results) {
+sassyLint.resultCount = function (results) {
   var warnings = this.warningCount(results),
       errors = this.errorCount(results);
 
@@ -100,7 +100,7 @@ sassLint.resultCount = function (results) {
  * @param {string} configPath path to a config file
  * @returns {object} an object containing error & warning counts plus lint messages for each parsed file
  */
-sassLint.lintText = function (file, options, configPath) {
+sassyLint.lintText = function (file, options, configPath) {
   var rules = slRules(this.getConfig(options, configPath)),
       ast = {},
       detects,
@@ -164,7 +164,7 @@ sassLint.lintText = function (file, options, configPath) {
  * @param {object} configPath - Path to a config file
  * @returns {object} Return the results of lintText - a results object
  */
-sassLint.lintFileText = function (file, options, configPath) {
+sassyLint.lintFileText = function (file, options, configPath) {
   var config = this.getConfig(options, configPath),
       ignores = config.files ? config.files.ignore : [];
 
@@ -182,7 +182,7 @@ sassLint.lintFileText = function (file, options, configPath) {
 
 /**
  * Takes a glob pattern or target string and creates an array of files as targets for
- * linting taking into account any user specified ignores. For each resulting file sassLint.lintText
+ * linting taking into account any user specified ignores. For each resulting file sassyLint.lintText
  * is called which returns an object of results for that file which we push to our results object.
  *
  * @param {string} files a glob pattern or single file path as a lint target
@@ -190,7 +190,7 @@ sassLint.lintFileText = function (file, options, configPath) {
  * @param {string} configPath path to a config file
  * @returns {object} results object containing all results
  */
-sassLint.lintFiles = function (files, options, configPath) {
+sassyLint.lintFiles = function (files, options, configPath) {
   var that = this,
       results = [],
       includes = [],
@@ -251,7 +251,7 @@ sassLint.lintFiles = function (files, options, configPath) {
  * @param {string} configPath path to a config file
  * @returns {object} results our results object in the user specified format
  */
-sassLint.format = function (results, options, configPath) {
+sassyLint.format = function (results, options, configPath) {
   var config = this.getConfig(options, configPath),
       format = config.options.formatter.toLowerCase();
 
@@ -269,7 +269,7 @@ sassLint.format = function (results, options, configPath) {
  * @param {string} configPath path to a config file
  * @returns {object} results our results object
  */
-sassLint.outputResults = function (results, options, configPath) {
+sassyLint.outputResults = function (results, options, configPath) {
   var config = this.getConfig(options, configPath);
 
   if (this.resultCount(results)) {
@@ -301,7 +301,7 @@ sassLint.outputResults = function (results, options, configPath) {
  * @param {string} [configPath] - path to the config file
  * @returns {void}
  */
-sassLint.failOnError = function (results, options, configPath) {
+sassyLint.failOnError = function (results, options, configPath) {
   // Default parameters
   options = typeof options !== 'undefined' ? options : {};
   configPath = typeof configPath !== 'undefined' ? configPath : null;
@@ -311,7 +311,7 @@ sassLint.failOnError = function (results, options, configPath) {
       configOptions = this.getConfig(options, configPath).options;
 
   if (errorCount.count > 0) {
-    throw new exceptions.SassLintFailureError(errorCount.count + ' errors were detected in \n- ' + errorCount.files.join('\n- '));
+    throw new exceptions.SassyLintFailureError(errorCount.count + ' errors were detected in \n- ' + errorCount.files.join('\n- '));
   }
 
   if (!isNaN(configOptions['max-warnings']) && warningCount.count > configOptions['max-warnings']) {
@@ -323,4 +323,4 @@ sassLint.failOnError = function (results, options, configPath) {
   }
 };
 
-module.exports = sassLint;
+module.exports = sassyLint;

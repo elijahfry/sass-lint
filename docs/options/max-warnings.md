@@ -22,9 +22,9 @@ options:
 Or inside a script:
 
 ``` javascript
-var sassLint = require('sassy-lint'),
+var sassyLint = require('sassy-lint'),
     config = {options: {'max-warnings': 50}};
 
-results = sassLint.lintFiles('sass/**/*.scss', config)
-sassLint.failOnError(results, config);
+results = sassyLint.lintFiles('sass/**/*.scss', config)
+sassyLint.failOnError(results, config);
 ```

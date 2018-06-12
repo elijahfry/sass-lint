@@ -1,4 +1,4 @@
-# Sassy Lint [![npm version](https://badge.fury.io/js/sassy-lint.svg)](http://badge.fury.io/js/sassy-lint) [![Build Status](https://travis-ci.org/sasstools/sassy-lint.svg?branch=develop)](https://travis-ci.org/sasstools/sassy-lint) [![Coverage Status](https://coveralls.io/repos/sasstools/sassy-lint/badge.svg?branch=develop&service=github)](https://coveralls.io/github/sasstools/sassy-lint?branch=develop) [![Dependency Status](https://david-dm.org/sasstools/sassy-lint.svg)](https://david-dm.org/sasstools/sassy-lint#info=dependencies&view=list) [![Dev Dependency Status](https://david-dm.org/sasstools/sassy-lint/dev-status.svg)](https://david-dm.org/sasstools/sassy-lint#info=devDependencies&view=list)
+# Sassy Lint
 
 A Node-only Sassy linter for both `sass` and `scss` syntax!
 

@@ -279,7 +279,7 @@ describe('sassy lint', function () {
   //  Lint files with config path
   // ==============================================================================
 
-  describe('sassLint Config load', function () {
+  describe('sassyLint Config load', function () {
     it('should accept multiple input sources in a config', function (done) {
       lintFiles(null, {options: {'cache-config': false}}, 'tests/yml/.multiple-inputs.yml', function (data) {
         assert.deepEqual(data, multiInputResults);
@@ -313,7 +313,7 @@ describe('sassy lint', function () {
   //  Counters
   // ==============================================================================
 
-  describe('sassLint detect counts', function () {
+  describe('sassyLint detect counts', function () {
     // ==============================================================================
     //  Error Count
     // ==============================================================================

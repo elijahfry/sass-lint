@@ -5,20 +5,20 @@ var lint = require('../index'),
     exceptions = require('../lib/exceptions');
 
 describe('failures', function () {
-  it('should raise SassLintFailureError if indentation is set to error', function (done) {
+  it('should raise SassyLintFailureError if indentation is set to error', function (done) {
     assert.throws(
       function () {
         var results = lint.lintFiles('tests/sass/indentation/indentation-spaces.scss', {rules: {indentation: 2}});  // 14 errors
         lint.failOnError(results); // Set indentation to error
       },
-      exceptions.SassLintFailureError
+      exceptions.SassyLintFailureError
     );
     assert.throws(
       function () {
         var results = lint.lintFiles('tests/sass/indentation/indentation-spaces.scss', {}, 'tests/yml/.indentation-error.yml');  // 14 errors
         lint.failOnError(results); // Set indentation to error
       },
-      exceptions.SassLintFailureError
+      exceptions.SassyLintFailureError
     );
 
     done();
